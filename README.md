@@ -1,35 +1,23 @@
-# Surface Crack Detection using CNNs and PySpark
+# Surface Crack Detection
 
 ## Overview
 
-This project implements a robust system for detecting surface cracks in images, a critical task in preventing structural failures across various industries like manufacturing and construction.  Leveraging the power of Convolutional Neural Networks (CNNs), the system achieves high accuracy in identifying cracks.  Furthermore, the project utilizes PySpark for distributed data processing, enabling efficient handling of large datasets and ensuring scalability for real-world applications.
-
-## Table of Contents
-
-- [Project Goals](#project-goals)
-- [Dataset](#dataset)
-- [Data Splitting](#data-splitting)
-- [Models](#models)
-- [VGG16 Architecture](#vgg16-architecture)
-- [Hyperparameter Tuning](#hyperparameter-tuning)
-- [Evaluation Metrics](#evaluation-metrics)
-- [Performance](#performance)
-- [Team](#team)
+This project implements a surface crack detection system using Convolutional Neural Networks (CNNs) and PySpark. The goal is to develop an efficient system for detecting surface cracks in images to prevent structural failures in industries such as manufacturing and construction. The project utilizes CNNs for image classification and PySpark for distributed data processing, allowing for scalable and efficient handling of large image datasets.
 
 ## Project Goals
 
-The core objective of this project is to develop a highly accurate and efficient system for surface crack detection in images.  This system aims to mitigate the risk of structural failures by enabling early identification of cracks.  A key aspect of the project is the integration of PySpark for scalable data processing, allowing the system to handle large image datasets effectively.
+The main objective of this project is to build a system that can accurately detect surface cracks in images. The system should enable early detection of cracks to reduce the risk of structural failures. The project also incorporates PySpark for scalable image data processing, ensuring that the system can handle large datasets efficiently.
 
 ## Dataset
 
-The dataset used in this project was sourced from Kaggle. It consists of 40,000 images, equally divided into two classes:
+The dataset used in this project is sourced from Kaggle and consists of 40,000 images divided into two categories:
 
 - Positive Crack Images: 20,000 images
 - Negative Crack Images: 20,000 images
 
-## Data Splitting
+### Data Splitting
 
-The dataset was partitioned into training, validation, and test sets to ensure robust model evaluation and prevent overfitting. The splits are as follows:
+The dataset is split into training, validation, and test sets:
 
 - Training Set: 70% (28,000 images)
 - Validation Set: 15% (6,000 images)
@@ -37,39 +25,26 @@ The dataset was partitioned into training, validation, and test sets to ensure r
 
 ## Models
 
-Several CNN architectures were explored in this project, including:
+The following CNN architectures were explored in this project:
 
 - VGG16
 - Custom CNN
 - ResNet50
 - LeNet
 
-## VGG16 Architecture
-
-The VGG16 model was selected for its strong performance in image classification tasks. The architecture employed in this project includes:
-
-- Input Layer: (224x224x3)
-- Pre-trained VGG16 Base
-- Flatten Layer
-- Dense Layer 1: 128 units, ReLU activation
-- Dropout Layer 1: 50%
-- Dense Layer 2: 64 units, ReLU activation
-- Dropout Layer 2: 50%
-- Output Layer: 2 units, Softmax activation
-
 ## Hyperparameter Tuning
 
-Careful attention was paid to hyperparameter tuning to optimize model performance. The following strategies were employed:
+The following hyperparameters were tuned to optimize model performance:
 
-- Learning Rate: Initialized at 0.0001 with a scheduling mechanism for gradual decrease.
-- Grid Search: Exploration of various combinations of learning rate, dropout rate, and batch size.
-- Batch Size: 32
-- Optimizer: Adam
-- Dropout Rate: 0.5
+- **Learning Rate**: 0.0001 with scheduling for gradual decrease.
+- **Grid Search**: Exploration of combinations of learning rate, dropout rate, and batch size.
+- **Batch Size**: 32
+- **Optimizer**: Adam
+- **Dropout Rate**: 0.5
 
 ## Evaluation Metrics
 
-Model performance was assessed using standard classification metrics, including:
+The model performance was evaluated using the following classification metrics:
 
 - Precision
 - Recall
@@ -77,10 +52,7 @@ Model performance was assessed using standard classification metrics, including:
 - Accuracy
 - Confusion Matrix
 
-
-
-## Team
-
-- Madhumitha Mandyam
-- Muneendra Magani
+## Team Members
 - Nandhika Rajmanikandan
+- Madhumitha
+- Muneendra
